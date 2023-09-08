@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { add } from '../store/cartSlice'
+// import Button from './Button'
 
 
 const Products = () => {
@@ -19,6 +20,7 @@ const Products = () => {
     }, [])
 
     const addToCart = (product) => {
+        // console.log(product);
         // dispatch add action
         dispatch(add(product))
     }
@@ -41,6 +43,7 @@ const Products = () => {
                                         Add To Cart
 
                                     </button>
+                                    {/* <Button primary="bg-blue-600" secondary="bg-blue-700 " last="bg-blue-800" onClick={() => addToCart(product)}>Add To Cart</Button> */}
                                 </div>
                             </div>
                         )
